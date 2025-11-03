@@ -1,0 +1,41 @@
+/* DashboardLayout.css */
+
+/* Contenedor principal (sidebar + contenido) */
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+/* Sidebar fijo */
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 10;
+}
+
+/* Contenedor de las páginas (lo que cambia con Outlet) */
+.dashboard-content {
+  margin-left: 250px; /* deja espacio al sidebar */
+  flex: 1;
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center; /* centra verticalmente */
+  padding: 2rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 900px) {
+  .dashboard-content {
+    margin-left: 0;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+}

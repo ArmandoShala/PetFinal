@@ -1,0 +1,140 @@
+/* ===== Tipografía ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;600&display=swap');
+
+.editar-mascota-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #F8F9FA;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===== Contenido principal ===== */
+.editar-mascota-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* ===== Título ===== */
+.titulo-editar {
+  font-family: 'Poppins', sans-serif;
+  color: #FF8C42;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ===== Mensajes ===== */
+.alerta {
+  background: #7FD8BE;
+  color: #2C3E50;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 500;
+  animation: slideIn 0.3s ease;
+}
+
+.alerta.error {
+  background: #E74C3C;
+  color: #fff;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Formulario ===== */
+.editar-mascota-form {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.grid-form {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.grid-form > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.editar-mascota-form label {
+  font-weight: 500;
+  color: #34495E;
+  margin-bottom: 0.25rem;
+}
+
+.editar-mascota-form input,
+.editar-mascota-form select,
+.editar-mascota-form textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #D1D5DB;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.editar-mascota-form input:focus,
+.editar-mascota-form select:focus,
+.editar-mascota-form textarea:focus {
+  border-color: #FF8C42;
+  box-shadow: 0 0 5px rgba(255,140,66,0.3);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ===== Imagen de preview ===== */
+.preview {
+  margin-top: 0.5rem;
+  max-width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== Botón ===== */
+.editar-mascota-form button {
+  background: #7FD8BE;
+  color: #2C3E50;
+  font-weight: 500;
+  border-radius: 16px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.editar-mascota-form button:hover {
+  background: #88D9B3;
+  transform: scale(1.05);
+}
+
+.editar-mascota-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== Responsive ===== */
+@media(max-width: 768px) {
+  .grid-form {
+    flex-direction: column;
+  }
+
+  .preview {
+    max-width: 100%;
+  }
+}

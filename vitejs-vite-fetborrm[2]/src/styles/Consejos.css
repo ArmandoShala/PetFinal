@@ -1,0 +1,54 @@
+/* src/styles/Consejos.css */
+
+.consejos-container {
+  padding: 20px;
+  background-color: #F8F9FA;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.consejos-title {
+  font-size: 1.8rem;
+  color: #FF8C42; /* naranja cálido primario */
+  margin-bottom: 20px;
+}
+
+.consejos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.consejo-card {
+  background: #FFFFFF;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.consejo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.consejo-card h3 {
+  font-size: 1.2rem;
+  color: #2C3E50; /* gris oscuro */
+  margin-bottom: 8px;
+}
+
+.consejo-card p {
+  font-size: 0.95rem;
+  color: #34495E; /* gris secundario para texto */
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .consejos-grid {
+    grid-template-columns: 1fr;
+  }
+}

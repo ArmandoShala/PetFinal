@@ -1,0 +1,148 @@
+/* ======== CONTENEDOR GENERAL ======== */
+.register-container {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #FF8C42, #FFA94D);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ======== TARJETA CENTRAL ======== */
+.register-card {
+  background: #fff;
+  padding: 2rem 2.2rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 340px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ======== LOGO Y ENCABEZADO ======== */
+.register-logo {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #A8E6CF;
+  padding: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 12px rgba(168, 230, 207, 0.6);
+  object-fit: contain;
+}
+
+.register-header h1 {
+  font-size: 1.7rem;
+  color: #FF8C42;
+  font-weight: 700;
+  margin: 0.2rem 0 0;
+}
+
+.register-header h2 {
+  color: #34495E;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+/* ======== FORMULARIO ======== */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 85%;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.6rem 0.8rem; /* 🔸 más compacto */
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: #FFA94D;
+  box-shadow: 0 0 6px rgba(255, 169, 77, 0.4);
+}
+
+/* ======== BOTÓN ======== */
+.register-button {
+  margin-top: 6px;
+  background: linear-gradient(135deg, #FF9F66, #FF8C42);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.register-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #FFA94D, #FF7A1A);
+}
+.register-card button {
+  
+  background: linear-gradient(135deg, #FF9F66, #FF8C42);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+/* ======== ENLACE ======== */
+.login-link {
+  margin-top: 1.1rem;
+  color: #34495E;
+  font-size: 0.85rem;
+}
+
+.login-link p {
+  margin: 0;
+}
+
+.login-link a {
+  color: #FF8C42;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #FF7A1A;
+  text-decoration: underline;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .register-card {
+    width: 85%;
+    padding: 1.8rem 1.2rem;
+  }
+
+  .register-logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .register-header h1 {
+    font-size: 1.5rem;
+  }
+}

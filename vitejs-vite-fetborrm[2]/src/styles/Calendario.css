@@ -1,0 +1,271 @@
+/* ============================================================
+   📅 Calendario.css — Versión FINAL
+   Totalmente visible y al lado del sidebar
+   ============================================================ */
+
+/* === Contenedor global del calendario === */
+.calendar-wrapper {
+  position: relative;
+  margin-left: 280px; /* ANCHO DEL SIDEBAR (ajusta si el tuyo es diferente) */
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  width: calc(100% - 280px);
+  min-height: 100vh;
+  background-color: #f8f9fb;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+/* === Panel del calendario === */
+.calendar-panel {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  min-width: 340px;
+}
+
+.calendar-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff7f50;
+  margin-bottom: 1.2rem;
+}
+
+/* === Calendario react-calendar === */
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  background: #fff !important;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.react-calendar__navigation button {
+  color: #ff7f50;
+  font-weight: 600;
+}
+
+.react-calendar__month-view__weekdays {
+  color: #ff7f50 !important;
+  font-weight: 600;
+}
+
+.react-calendar__tile {
+  color: #333 !important;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+.react-calendar__tile:hover {
+  background-color: #ffe5d9 !important;
+}
+
+.react-calendar__tile--active {
+  background-color: #ff7f50 !important;
+  color: white !important;
+}
+
+/* === Panel de eventos === */
+.events-panel {
+  flex: 1.3;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  height: fit-content;
+}
+
+.events-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.no-events {
+  color: #888;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.events-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* === Tarjetas de evento === */
+.event-card {
+  background-color: #fafafa;
+  border: 1.5px solid #eee;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.event-card:hover {
+  background-color: #fff5f0;
+  border-color: #ff7f50;
+}
+
+.event-info strong {
+  color: #333;
+}
+
+.event-info p {
+  margin: 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* === Botones === */
+.btn-add {
+  align-self: flex-end;
+  background-color: #ff7f50;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.3rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-add:hover {
+  background-color: #ff9069;
+  transform: scale(1.05);
+}
+
+.btn-delete {
+  background-color: #ff5c5c;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+  background-color: #e03e3e;
+}
+
+/* === Modal === */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.modal h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.modal input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.modal input:focus {
+  border-color: #ff7f50;
+  outline: none;
+  box-shadow: 0 0 4px rgba(255, 127, 80, 0.3);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.btn-cancel {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background-color: #bbb;
+}
+
+.btn-save {
+  background-color: #ff7f50;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-save:hover {
+  background-color: #ff9169;
+}
+
+/* Scrollbar */
+.events-list::-webkit-scrollbar {
+  width: 8px;
+}
+.events-list::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 127, 80, 0.6);
+  border-radius: 4px;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .calendar-wrapper {
+    margin-left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calendar-panel,
+  .events-panel {
+    width: 100%;
+    max-width: 100%;
+  }
+}

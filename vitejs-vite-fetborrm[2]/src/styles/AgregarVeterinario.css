@@ -1,0 +1,126 @@
+/* ============================================================
+   🌿 AgregarVeterinario.css — Diseño moderno verde y naranja
+   ============================================================ */
+
+.agregar-veterinario-container {
+  margin-left: 460px; /* deja espacio para el sidebar */
+  padding: 40px 20px;
+  background-color: #f9fff7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Poppins", "Arial", sans-serif;
+
+  position: relative;
+  width: calc(100% - 260px); /* 👈 clave: ocupa el espacio restante del ancho */
+}
+
+
+/* ===== Título ===== */
+.agregar-veterinario-container h1 {
+  font-size: 2rem;
+  color: #2e7d32; /* verde oscuro */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ===== Formulario ===== */
+.form-agregar {
+  background-color: #ffffff;
+  border: 2px solid #a5d6a7; /* borde verde suave */
+  border-radius: 15px;
+  padding: 30px 40px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.15); /* sombra naranja */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.2s ease;
+}
+
+.form-agregar:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== Campos de texto ===== */
+.form-agregar input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-agregar input:focus {
+  border-color: #66bb6a; /* verde claro */
+  box-shadow: 0 0 6px rgba(102, 187, 106, 0.4);
+  outline: none;
+}
+
+/* ===== Botón ===== */
+.form-agregar button {
+  background-color: #ffa94d; /* naranja principal */
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.form-agregar button:hover {
+  background-color: #ff7b00; /* naranja más intenso */
+  transform: scale(1.05);
+}
+
+/* ===== Animación ligera ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.agregar-veterinario-container {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ===== Responsivo ===== */
+@media screen and (max-width: 992px) {
+  .agregar-veterinario-container {
+    margin-left: 220px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .agregar-veterinario-container {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .form-agregar {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .agregar-veterinario-container {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .agregar-veterinario-container {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,333 @@
+/* === CONTENEDOR GENERAL (A la derecha del sidebar) === */
+.main-content {
+  margin-left: 250px; /* igual al ancho del sidebar */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center; /* centra verticalmente */
+  background-color: #f9f9f9;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  transition: margin-left 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === CONTENEDOR DE MASCOTAS === */
+.mascotas-container {
+  margin-left: 450px; 
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+/* === LISTA DE MASCOTAS === */
+.mascotas-lista {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+  width: 450px;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.mascotas-lista h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  user-select: none;
+}
+
+.vacio {
+  font-style: italic;
+  color: #777;
+  text-align: center;
+  margin-top: 2rem;
+  user-select: none;
+}
+
+/* === TARJETA DE MASCOTA === */
+.tarjeta-mascota {
+  display: flex;
+  align-items: center;
+  background: #ff784f22;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  border: 2px solid transparent;
+}
+
+.tarjeta-mascota:hover {
+  background-color: #ff784f44;
+}
+
+.tarjeta-mascota.activa {
+  border-color: #ff784f;
+  background-color: #ff784faa;
+}
+
+.tarjeta-mascota img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 1rem;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+}
+
+.tarjeta-mascota .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  user-select: none;
+}
+
+.tarjeta-mascota .info h3 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.tarjeta-mascota .info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.tarjeta-mascota .info span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ff784f;
+}
+
+/* === FORMULARIO REGISTRAR === */
+.registrar-form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.registrar-form h3 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #444;
+}
+
+.registrar-form input[type="text"] {
+  padding: 0.45rem 0.7rem;
+  font-size: 1rem;
+  border: 1.8px solid #ccc;
+  border-radius: 7px;
+  transition: border-color 0.3s ease;
+  outline-offset: 2px;
+}
+
+.registrar-form input[type="text"]:focus {
+  border-color: #ff784f;
+  outline: none;
+}
+
+.btn-registrar {
+  background-color: #ff784f;
+  color: white;
+  border: none;
+  padding: 0.55rem 1.3rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.btn-registrar:hover {
+  background-color: #e05c3d;
+}
+
+/* === DETALLE DE MASCOTA === */
+.detalle-mascota {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.8rem 2rem;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+  width: 350px;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detalle-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.detalle-card img {
+  width: 260px;
+  height: 260px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.15);
+}
+
+.detalle-card h3 {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.detalle-card p {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+  color: #444;
+}
+
+.detalle-card strong {
+  color: #ff784f;
+}
+
+.btn-eliminar {
+  margin-top: 1.4rem;
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.btn-eliminar:hover {
+  background-color: #8e261c;
+}
+
+/* === PLACEHOLDER === */
+.detalle-placeholder {
+  font-style: italic;
+  color: #666;
+  text-align: center;
+}
+
+/* === SCROLLBAR PERSONALIZADO === */
+.mascotas-lista::-webkit-scrollbar,
+.detalle-mascota::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mascotas-lista::-webkit-scrollbar-thumb,
+.detalle-mascota::-webkit-scrollbar-thumb {
+  background-color: #ff784f88;
+  border-radius: 4px;
+}
+
+.mascotas-lista::-webkit-scrollbar-track,
+.detalle-mascota::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 0;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .mascotas-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .detalle-mascota img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* === MENSAJES === */
+.mensaje {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #fffae6;
+  color: #b57d00;
+  font-weight: 600;
+  text-align: center;
+  user-select: none;
+}
+
+/* === BOTONES ICONO === */
+.btn-registrar,
+.btn-eliminar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+/* === TARJETAS MÁS MODERNAS === */
+.tarjeta-mascota {
+  background: #fff7f2;
+  border-radius: 12px;
+  padding: 0.7rem;
+  box-shadow: 0 6px 12px rgb(0 0 0 / 0.08);
+}
+
+.tarjeta-mascota:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.12);
+}
+
+/* === DETALLE CARD MÁS MODERNO === */
+.detalle-card {
+  background: #fffaf7;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.detalle-card img {
+  transition: transform 0.3s ease;
+}
+
+.detalle-card img:hover {
+  transform: scale(1.05);
+}
+
+/* === FORMULARIO MÁS AIRY === */
+.registrar-form input[type="text"] {
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.registrar-form input[type="text"]:focus {
+  box-shadow: 0 0 8px rgb(255 120 79 / 0.4);
+  border-color: #ff784f;
+}
+
+/* === DETALLE PLACEHOLDER ICON === */
+.detalle-placeholder p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-style: italic;
+  color: #999;
+}

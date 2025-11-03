@@ -1,0 +1,140 @@
+.veterinarios-container {
+  padding: 20px;
+  margin-left: 250px; /* 👈 ajusta según el ancho del sidebar */
+  box-sizing: border-box;
+  background-color: #f9fff7; /* verde muy clarito de fondo */
+  min-height: 100vh;
+}
+
+.veterinarios-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2e7d32; /* verde oscuro */
+  font-weight: 700;
+}
+
+/* 🧡 Botón para agregar veterinario */
+.btn-registrar {
+  display: block;
+  margin: 0 auto 20px auto;
+  background-color: #ffa94d; /* naranja suave */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-registrar:hover {
+  background-color: #ff7b00; /* naranja más intenso */
+  transform: scale(1.05);
+}
+
+/* 🌟 Contenedor de tarjetas */
+.veterinarios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 10px;
+}
+
+/* 🎴 Tarjetas con colores suaves */
+.veterinario-card {
+  background: linear-gradient(135deg, #ffffff, #d4f8d4); /* blanco a verde claro */
+  border: 1px solid #a5d6a7;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.15); /* sombra naranjita */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.veterinario-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(255, 140, 0, 0.3); /* más naranja en hover */
+  background: linear-gradient(135deg, #fff3e0, #c8facc); /* naranja claro a verde claro */
+}
+
+.veterinario-card h3 {
+  color: #1b5e20; /* verde más oscuro */
+  margin-bottom: 10px;
+}
+
+.veterinario-card p {
+  margin: 5px 0;
+  color: #4e342e; /* marrón suave para texto */
+}
+
+/* 🧾 Formulario */
+.form-agregar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.form-agregar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 220px;
+  transition: border-color 0.2s ease;
+}
+
+.form-agregar input:focus {
+  border-color: #66bb6a; /* verde claro */
+  outline: none;
+}
+
+.form-agregar button {
+  background-color: #81c784; /* verde pastel */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.form-agregar button:hover {
+  background-color: #66bb6a;
+  transform: scale(1.05);
+}
+.vet-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.btn-llamar, .btn-mapa {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  font-size: 14px;
+}
+
+.btn-llamar {
+  background-color: #81c784; /* verde claro */
+  color: white;
+}
+
+.btn-llamar:hover {
+  background-color: #66bb6a;
+  transform: scale(1.05);
+}
+
+.btn-mapa {
+  background-color: #ffa94d; /* naranja */
+  color: white;
+}
+
+.btn-mapa:hover {
+  background-color: #ff7b00;
+  transform: scale(1.05);
+}

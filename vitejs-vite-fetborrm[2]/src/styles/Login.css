@@ -1,0 +1,115 @@
+/* Fondo general: ocupa toda la pantalla con el degradado */
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #FF8C42, #FFA94D);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #2C3E50;
+  margin: 0;
+  padding: 0;
+}
+
+/* Card central blanca */
+.login-card {
+  background-color: #ffffff;
+  width: 420px;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Animación suave de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo superior */
+.login-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: #A8E6CF;
+  padding: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.login-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #FF8C42;
+  font-weight: 700;
+}
+
+/* Inputs */
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-card input {
+  padding: 0.9rem 1rem;
+  border: 1.5px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card input:focus {
+  border-color: #FFA94D;
+  box-shadow: 0 0 8px rgba(255, 169, 77, 0.4);
+}
+
+/* Botón */
+.login-card button {
+  background: linear-gradient(135deg, #FF9F66, #FF8C42);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.login-card button:hover {
+  background: linear-gradient(135deg, #FFA94D, #FF7A1A);
+  transform: translateY(-2px);
+}
+
+/* Mensaje de error */
+.error {
+  background-color: rgba(255, 0, 0, 0.08);
+  color: #c0392b;
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Diseño adaptable (solo cambia tamaño, mantiene layout de escritorio) */
+@media (max-width: 1024px) {
+  .login-card {
+    width: 90%;
+    max-width: 420px;
+  }
+}

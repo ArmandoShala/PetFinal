@@ -1,0 +1,166 @@
+/* ============================================================
+   🧭 Sidebar.css — Versión Final Ajustada
+   ============================================================ */
+
+/* Contenedor del sidebar */
+.sidebar {
+  width: 260px; /* ancho real y consistente */
+  height: 100vh; /* Ocupa toda la altura */
+  background-color: #ff7f50; /* Naranja principal */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1.2rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+  position: fixed; /* Siempre visible al lado izquierdo */
+  top: 0;
+  left: 0;
+  font-family: "Poppins", "Arial", sans-serif;
+  z-index: 1000; /* Asegura que siempre esté por encima del contenido */
+}
+
+.sidebar-logo img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0.5rem;
+}
+.sidebar-logo span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ===== Logo ===== */
+.sidebar-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.sidebar-logo img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Navegación ===== */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex-grow: 1;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+/* ===== Estado activo (ruta actual) ===== */
+.sidebar-nav a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+}
+
+/* ===== Botón de cerrar sesión ===== */
+.logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: #ffffff;
+  color: #ff7f50;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.logout-button:hover {
+  background-color: #ffe3d5;
+  transform: scale(1.05);
+}
+
+/* ===== Iconos ===== */
+.sidebar-nav svg,
+.logout-button svg {
+  font-size: 1.2rem;
+}
+
+/* ===== Ajuste del contenido principal (para que no quede debajo) ===== */
+.main-content {
+  margin-left: 260px; /* Igual al ancho del sidebar */
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: #f8f9fb;
+  min-height: 100vh;
+  width: calc(100% - 260px);
+}
+
+/* ===== Responsivo ===== */
+@media screen and (max-width: 992px) {
+  .sidebar {
+    width: 220px;
+    padding: 1.5rem 1rem;
+  }
+
+  .main-content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+
+  .sidebar-logo {
+    font-size: 1.5rem;
+  }
+
+  .sidebar-nav a {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 80px;
+    width: 100%;
+  }
+}

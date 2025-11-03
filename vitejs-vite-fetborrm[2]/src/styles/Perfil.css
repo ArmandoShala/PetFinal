@@ -1,0 +1,158 @@
+.perfil-container {
+  display: flex;
+  background: #f7f9fc;
+  min-height: 100vh;
+}
+
+/* Sidebar fija */
+.sidebar {
+  width: 320px; /* ancho fijo sidebar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #ff784f;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  color: white;
+  font-weight: bold;
+  overflow-y: auto;
+}
+
+/* Contenido del perfil, ocupa resto del espacio */
+.perfil-content {
+  margin-left: 320px; /* mismo ancho que sidebar */
+  padding: 2rem 3rem;
+  width: calc(100% - 320px); /* Ocupa todo menos sidebar */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  margin-top: 2rem;
+  min-height: 90vh;
+  overflow-y: auto;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  /* No centramos contenido, alineamos al inicio */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Opcional: título más grande y margen abajo */
+.perfil-content h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Ajustar foto de perfil y contenido dentro */
+.perfil-card {
+  width: 100%; /* ocupa todo el ancho posible */
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.perfil-avatar {
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: #666;
+  overflow: hidden;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Formulario y botones se adaptan al ancho */
+.perfil-info {
+  flex: 1 1 auto;
+  min-width: 300px;
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.campo input {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #ff784f;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #e05c3d;
+}
+
+.btn-cerrar-sesion {
+  background-color: #cc4b3a;
+  margin-top: 2rem;
+  align-self: flex-start;
+}
+
+.btn-cerrar-sesion:hover {
+  background-color: #a93b2b;
+}
+
+/* Mensajes */
+.mensaje {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Ajustes generales para formularios */
+.perfil-form {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.perfil-form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.perfil-form input {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.perfil-form button {
+  width: auto;
+  padding: 0.6rem 1.3rem;
+}
