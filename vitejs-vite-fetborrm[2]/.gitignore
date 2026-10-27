@@ -1,0 +1,19 @@
+# Dependencias y build
+node_modules
+dist
+
+# Variables de entorno (contienen la configuración de Firebase)
+.env
+.env.local
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store

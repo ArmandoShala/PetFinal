@@ -3,15 +3,24 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
+// La configuración se lee desde variables de entorno (archivo .env en la raíz del proyecto).
+// Copia .env.example a .env y pega los valores desde:
+// Consola de Firebase > Configuración del proyecto > General > Tus apps > Configuración del SDK
 const firebaseConfig = {
-  apiKey: "AIzaSyCJ9x_Uqln18LnPhGr5czcrmphxSyskNxQ",
-  authDomain: "petcare-85310.firebaseapp.com",
-  projectId: "petcare-85310",
-  storageBucket: "petcare-85310.firebasestorage.app",
-  messagingSenderId: "571411959871",
-  appId: "1:571411959871:web:27a980c7d0f6564fa9a88a",
-  measurementId: "G-KCZ0SQ0PX5"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
+
+if (!firebaseConfig.apiKey || !firebaseConfig.projectId) {
+  throw new Error(
+    'Falta la configuración de Firebase: copia .env.example a .env, completa los valores y reinicia el servidor de desarrollo (ver README, sección "Configuración de Firebase").'
+  );
+}
 
 // Inicializa Firebase
 const app = initializeApp(firebaseConfig);
